@@ -30,7 +30,7 @@ personas = [
 loop do
   # Select a persona
   persona = personas.rotate!.first
-  persona[:img] = 'dropbear.png'
+  #persona[:img] = 'dropbear.png'
   fortune = `/usr/games/fortune -s fortunes`
   SinatraApp.post('/post', { body: {name: persona[:name], img: persona[:img], message: fortune } })
   seconds = rand(3..10)
